@@ -50,3 +50,25 @@ def evaluate(num):
 # start the app
 if __name__ == "__main__":
 	app.run(debug=True)
+
+
+
+
+# The jinja filters:
+
+| Filter  | Description                                                  | Example       |                           |
+| ------- | ------------------------------------------------------------ | ------------- | ------------------------- |
+| upper   | Converts text to uppercase                                   | "alice"       | upper → "ALICE"           |
+| lower   | Converts text to lowercase                                   | "Alice"       | lower → "alice"           |
+| title   | Capitalizes the first letter of each word                    | "hello world" | title → "Hello World"     |
+| length  | Gets the number of items in a list or characters in a string | "apple"       | length → 5                |
+| default | Sets a fallback value if the variable is None/empty          | none          | default("N/A") → "N/A"    |
+| join    | Joins items in a list with a separator                       | ["a", "b"]    | join(", ") → "a, b"       |
+| replace | Replaces part of a string                                    | "hello"       | replace("h", "y") → "yello" |
+| date    | Formats a datetime object                                    | now           | date("Y-m-d")             |
+| safe    | Prevents Jinja from escaping HTML                            | <b>Hello</b>  | safe → <b>Hello</b>       |
+
+
+<p>Username: {{ username|upper }}</p>
+
+<p>Username: ALICE</p>
